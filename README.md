@@ -5,7 +5,12 @@ You need to do it before use on the site.
 
 ## Using
 
-gulp [--width=<pixels> --height=<pixels>]
+gulp [--width &lt;pixels&gt; --height &lt;pixels&gt;]
+
+## Options
+
+`--width` or `-w` - maximum width
+`--height` or `-h` - maximum height
 
 ### Notes
 
