@@ -10,7 +10,7 @@ gulp [--width &lt;pixels&gt; --height &lt;pixels&gt;]
 ## Options
 
 `--width` or `-w` - maximum width
-`--height` or `-h` - maximum height
+`--height` or `-t` - maximum height
 
 ### Notes
 
