@@ -6,7 +6,7 @@ You need to do it before using images and video on a site.
 ## Using
 
 Upload your folders with images and video into `./src` folder. Then launch:  
-`gulp [--width &lt;pixels&gt; --height &lt;pixels&gt;]`  
+`gulp [--width <pixels> --height <pixels>]`  
 and get processed images and video from `./dst` folder. Your directory structure will be preserved.  
 
 ## Options
