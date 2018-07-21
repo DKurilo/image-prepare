@@ -32,12 +32,3 @@ SET FFMPEG_DATADIR=d:\utils\ffmpeg\presets
 
 Don't forget to change the paths.  
 Feel free to change videoprocess.sh / videoprocess.bat as you need. As example, to remove audio you need to replace `-c:a aac -b:a 160k -async 1` with `-an`.  
-
-## Known issues
-
-1. imagemin-pngquant uses pngqunat-bin, and it contains old version of pngquant.exe. I created pull request to fix it: https://github.com/imagemin/pngquant-bin/pull/70
-2. imagemin-pngquant doesn't have `--strip` option support. I created pull request to fix it: https://github.com/imagemin/imagemin-pngquant/pull/44
-
-### Workaround
-1. copy pngquant.exr from: https://pngquant.org/pngquant-windows.zip to node_modules/pngquant-bin/vendor
-2. copy index.js from https://github.com/DKurilo/imagemin-pngquant/blob/master/index.js to node_modules/imagemin-pngquant/

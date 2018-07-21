@@ -1,22 +1,23 @@
 {
-  "name": "minificator",
-  "version": "1.0.1",
+  "name": "image-preparing",
+  "version": "1.2.0",
   "scripts": {
-    "test": "gulp test"
+    "start": "gulp"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-image-resize": "^0.13.0",
-    "gulp-imagemin": "~3.4.0",
-    "gulp-load-plugins": "~1.5.0",
-    "imagemin-jpeg-recompress": "^5.1.0",
-    "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-pngquant": "^5.0.1",
-    "get-video-dimensions": "^1.0.0",
-    "mkdirp": "^0.5.1"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "dependencies": {}
+  "dependencies": {
+      "gulp": "^3.9.1",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "~4.1.0",
+    "gulp-load-plugins": "~1.5.0",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "get-video-dimensions": "^1.0.0",
+    "mkdirp": "^0.5.1"
+  }
 }
