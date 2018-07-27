@@ -1,7 +1,16 @@
 {
   "name": "image-preparing",
   "license": "mit",
-  "version": "1.2.0",
+  "author": { 
+    "name" : "Dima Kurilo",
+    "email" : "dkurilo@gmail.com",
+    "url" : "https://kurilo.us/"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/DKurilo/image-prepare.git"
+  },
+  "version": "1.2.1",
   "scripts": {
     "start": "gulp"
   },
