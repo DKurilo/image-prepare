@@ -3,6 +3,12 @@
 Gulp routine to resize and minify images and video.
 You need to do it before using images and video on a site.
 
+## Installation
+
+In directory where you want to have this tool type:  
+`npm install image-preparing`  
+after installation will be finished, you will have directories `src` and `dst` in your directory.  
+
 ## Using
 
 Upload your folders with images and video into `./src` folder. Then launch:  

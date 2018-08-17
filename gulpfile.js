@@ -180,3 +180,8 @@ gulp.task('default', [], function () {
     });
   });
 });
+
+gulp.task('install', [], function () {
+  const packagePath = path.join('.', 'node_modules', 'image-preparing');
+  return gulp.src(path.join(packagePath ,'**', '*'), {base: packagePath}).pipe(gulp.dest(process.cwd()));
+});
