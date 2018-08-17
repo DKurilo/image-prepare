@@ -182,6 +182,6 @@ gulp.task('default', [], function () {
 });
 
 gulp.task('install', [], function () {
-  const packagePath = path.join('.', 'node_modules', 'image-preparing');
-  return gulp.src(path.join(packagePath ,'**', '*'), {base: packagePath}).pipe(gulp.dest(process.cwd()));
+  const packagePath = process.cwd();
+  return gulp.src(path.join(packagePath ,'**', '*'), {base: packagePath}).pipe(gulp.dest(path.join(packagePath, '..', '..'));
 });
