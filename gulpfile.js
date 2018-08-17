@@ -183,5 +183,5 @@ gulp.task('default', [], function () {
 
 gulp.task('install', [], function () {
   const packagePath = process.cwd();
-  return gulp.src(path.join(packagePath ,'**', '*'), {base: packagePath}).pipe(gulp.dest(path.join(packagePath, '..', '..'));
+  return gulp.src(path.join(packagePath ,'**', '*'), {base: packagePath}).pipe(gulp.dest(path.join(packagePath, '..', '..')));
 });
