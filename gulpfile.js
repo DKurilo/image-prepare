@@ -38,6 +38,7 @@ const arg = (argList => {
 })(process.argv);
 
 gulp.task('image', function() {
+    console.log('qqq');
     return gulp.src(path.join('src', '**/*.{gif,jpg,jpeg,JPG,JPEG,svg,png}'))
         .pipe(imageResize({
           width : arg.width || arg.w || 0,
@@ -59,9 +60,9 @@ gulp.task('image', function() {
               quality: 75
             }),
             imageminPngquant({
-              quality: '0-100',
+              quality: [0, 1],
               speed: 1,
-              strip: 1
+              strip: true
             }),
             $.imagemin.svgo({cleanupIDs: false})
           ],{
@@ -167,8 +168,7 @@ const processQueue = (script) => {
   });
 };
 
-gulp.task('default', [], function () {
-  gulp.start('image');
+gulp.task('default',gulp.series('image'), function (resolve) {
   processFolder(path.resolve('./src'), path.resolve('./src'), 'dst').then(() => {
     console.log(`Need to process: ${queue.length} video files.`);
     let script = 'videoprocess.sh';
@@ -177,11 +177,12 @@ gulp.task('default', [], function () {
     }
     processQueue(script).then(() => {
       console.log('finished');
+      resolve();
     });
   });
 });
 
-gulp.task('install', [], function () {
+gulp.task('install', function () {
   const packagePath = process.cwd();
   return gulp.src(path.join(packagePath ,'**', '*'), {base: packagePath}).pipe(gulp.dest(path.join(packagePath, '..', '..')));
 });

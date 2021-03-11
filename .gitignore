@@ -1,6 +1,8 @@
 node_modules
-src/test
-dst/test
+src/**/*
+!src/.gitkeep
+dst/**/*
+!dst/.gitkeep
 *.temp
 *.log
 *.mbtree
